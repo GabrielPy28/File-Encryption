@@ -3,13 +3,13 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import base64
 
-#---------------------------------------------  Cliente ----------------------------------------------------------#
-# Initialize IOTA API
-api = Iota('https://nodes.iota.org:443', seed='YOUR_SEED', security_level=2)
-
 # File Source and Destination Paths
 file = input('Enter the path of the file: ')
 path_save = input('Enter the destination path to save the file: ')
+
+#---------------------------------------------  Cliente ----------------------------------------------------------#
+# Initialize IOTA API
+api = Iota('https://nodes.iota.org:443', seed='YOUR_SEED', security_level=2)
 
 # Encrypt the file
 def encrypt_file(file_path):
